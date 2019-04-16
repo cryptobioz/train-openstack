@@ -19,7 +19,7 @@ module TrainPlugins
 				'openstack://'
 			end
 
-			def openstack_resource
+			def openstack_resource(service_type)
 				@opts[:service_type] = service_type
 				OpenStack::Connection.create(@opts)
 			end
